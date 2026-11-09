@@ -1,0 +1,47 @@
+# springboot-starting-lesson
+
+## pom file
+1. pom.xml (pom) file is Project Object Model file.
+2. GAV → Group ID, Artifact ID and Version ID
+3. Get central repository for maven project https://central.sonatype.com
+4. mvnw is wrapper file that automatically download
+
+```xml
+<!--Automatic start on the server-->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+</dependency>
+```
+
+### DevOps Tracker
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+```
+### Actuator Endpoints
+```bash
+/actuator/info
+/actuator/health
+/actuator/beans
+/actuator/threaddump
+/actuator/mappings
+```
+
+### RUnning App From Commandline
+#### 1. Using jar file
+```bash
+mvnw package
+# then
+java -jar <application_name>
+# java -jar target/demo-app
+java -jar target\demo-app-0.0.1-SNAPSHOT.jar
+```
+
+#### Using springboot mvnn plugin
+```bash
+./mvnw package
+./mvnw spring-boot:run
+```# springboot-rest-api-crud-lesson
